@@ -1,10 +1,9 @@
 # Load packages ----
 library(shiny)
 library(tidyverse)
-source("http://gitlab.com/os-amsterdam/tools-onderzoek-en-statistiek/-/raw/main/R/load_all.R")
+source("https://gitlab.com/os-amsterdam/tools-onderzoek-en-statistiek/-/raw/main/R/OIS_ggtheme.R")
 
 load("ms_shiny.RData")
-
 
 
 
