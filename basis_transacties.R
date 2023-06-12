@@ -10,7 +10,7 @@ library(lubridate)
 
 # Load data ----
 
-ms<- read.xlsx("xlsx/Mastercard_sector7_maand_sd.xlsx")
+ms<- read.xlsx("../transactiedata/levering 5 tm 1 mei 2023/levering 5 tm 1 mei 2023/xlsx/Mastercard_sector7_maand_sd.xlsx")
 
 
 # figuur 
@@ -57,6 +57,9 @@ ms_long<- ms |>
 
 my_plot <- function(x, sd,  waarde, branche, xmin, xmax){
   
+  
+  wild_pal <- c("#004699", "#009de6", "#53b361", "#bed200", "#ffe600", "#ff9100", "#ec0000")
+  
   x|>
     
     filter(sector %in% branche,
@@ -71,14 +74,10 @@ my_plot <- function(x, sd,  waarde, branche, xmin, xmax){
     
     geom_col()+
     
-    labs(title=NULL, 
-         x=NULL,
-         y = NULL) +
+    labs(title=NULL, x=NULL,y = NULL) +
     
-    theme_os()+ 
+    scale_fill_manual(name= NULL, values = wild_pal) +
     
-    scale_fill_manual(name= NULL, 
-                      values = wild_pal) +
     guides(fill = guide_legend(nrow = 2, reverse = T))+
     
     xlim(xmin, xmax) +
@@ -97,4 +96,4 @@ my_plot <- function(x, sd,  waarde, branche, xmin, xmax){
 #            xmax= ms_long$datum["2023-01-01"])
 
 
-save(ms, ms_long, theme_os, my_plot, file = "ms_shiny.RData")
+save(ms, ms_long, my_plot, file = "ms_shiny.RData")
