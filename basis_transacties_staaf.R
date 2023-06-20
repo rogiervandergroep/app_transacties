@@ -7,7 +7,7 @@ source("tooltip_css.R")
 
 
 # Load data ---
-ms     <- read.xlsx("../transactiedata/levering 5 tm 1 mei 2023/levering 5 tm 1 mei 2023/xlsx/Mastercard_sector7_week_sd.xlsx")
+ms     <- read.xlsx("../transactiedata/levering 6 tm 1 juni 2023/xlsx/Mastercard_sector7_week_sd.xlsx")
 
 
 ms$week<- str_pad(ms$week, side = "left", width = 2, pad = 0)
