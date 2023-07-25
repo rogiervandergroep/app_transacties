@@ -1,19 +1,18 @@
 
 
-#install.packages("gfonts")
+# kleurenwijzen os
+# https://os-amsterdam.gitlab.io/datavisualisatie-onderzoek-en-statistiek/
+
+# install.packages("gfonts")
 library(gfonts)
+
 # get_all_fonts()
-# 
+
 # setup_font(
 #   id = "roboto",
-#   output_dir = "www"
-# )
+#   output_dir = "www")
 
 use_font("roboto", "www/css/roboto.css")
-
-
-#windowsFonts("Corbel" = windowsFont("Corbel"))
-
 
 ### default settings ggiraph
 
